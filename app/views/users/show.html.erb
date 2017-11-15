@@ -7,8 +7,7 @@
       <div class="Annonce_headerLocalisation-mobile mobile-only">
         <strong>Lisboa</strong><span>&nbsp;</span></div>
         <div class="Annonce_header_img">
-         <img
-         class="photo" src="http://via.placeholder.com/250x250" />
+         <%= image_tag @user.facebook_picture_url || "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "photo" %>
          <div class="AnnonceProf_price mobile-only">
            <div>25€</div>
          </div>
@@ -17,16 +16,16 @@
          <div class="Annonce_headerLocalisation desktop-only">
            <strong>Lisboa</strong><span>&nbsp;</span></div>
            <div class="Annonce_headerName">
-            <div class="prenom">Sinead</div>
+            <div class="prenom"><%= @user.first_name %></div>
           </div>
-          <ul class="ratingV2">
-            <li class="starV2 star-fullV2"></li>
-            <li class="starV2 star-fullV2"></li>
-            <li class="starV2 star-fullV2"></li>
-            <li class="starV2 star-fullV2"></li>
-            <li class="starV2 star-fullV2"></li>
-            <li class="Annonce_headerAvis">(2 avaliações)</li>
-          </ul>
+          <div class="rating">
+            <i class="glyphicon glyphicon-star"></i>
+            <i class="glyphicon glyphicon-star"></i>
+            <i class="glyphicon glyphicon-star"></i>
+            <i class="glyphicon glyphicon-star"></i>
+            <i class="glyphicon glyphicon-star"></i>
+          </div>
+          <h4>12 reviews</h4>
         </div>
       </div>
     </div>
@@ -68,7 +67,7 @@
      <div class="avis_recos">
       <div class="Annonce_full Annonce_avis" id="_avaliacao">
        <h3 class="AnnonceContent_subTitle">
-        2 avaliações sobre Sinead
+        2 avaliações sobre <%= @user.first_name %>
         <ul class="ratingV2">
          <li class="starV2 star-fullV2"></li>
          <li class="starV2 star-fullV2"></li>
@@ -79,7 +78,7 @@
        </ul>
      </h3>
      <div class="AnnonceContent_subTitle_text">
-     Todas as avaliações são coletadas pelo nosso serviço e são fiáveis. Elas correspondem a verdadeiras experiências dos membros do Superprof.</div>
+     Todas as avaliações são coletadas pelo nosso serviço e são fiáveis. Elas correspondem a verdadeiras experiências dos membros do Easy Cleaners.</div>
    </div>
    <div class="Annonce_full Annonce_full-marginSmall">
      <h3 class="AnnonceContent_subTitle2"> 2 avaliações </h3>
@@ -90,7 +89,7 @@
         <div class="Annonce_evalTxt">
           <div class="Annonce_evalName">Mayumi <span>b2</span></div>
           <p class="AnnonceContent_text">
-            <b>Perfeito!</b> I'm enjoying having lessons with Sinead! Now the classes are with my cousin and me and it has been really helpful. I highly recommend lessons with Sinead!
+            <b>Perfeito!</b> Testimonal
           </p>
         </div>
       </div>
@@ -104,8 +103,7 @@
      <div class="Annonce_evalTxt">
        <div class="Annonce_evalName">Andreia </div>
        <p class="AnnonceContent_text">
-        <b>Perfeito!</b> I had private lessons with Sinead and I hardly recommend you to try! She is an amazing person and teacher, very enthusiastic and adaptable to your needs. I worked with her some vocabulary  (legal English) and fluency and i'm truly more confident. She was very helpful even when we were distant and couldn't meet.<br />
-        Thank you again Sinead !!
+        <b>Perfeito!</b> testimonial
       </p>
     </div>
   </div>
