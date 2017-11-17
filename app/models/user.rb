@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   has_many :reviews
   geocoded_by :address
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :address, presence: true
   after_validation :geocode, if: :address_changed?
 
